@@ -1,0 +1,7 @@
+[2024-06-03T19:06:55.911747+02:00] info.INFO: Urzytkowanik o ip: ::1 prosi o akcje: /megusta/index [] []
+[2024-06-03T19:07:00.871461+02:00] info.INFO: Urzytkowanik o ip: ::1 prosi o akcje: /megusta/index [] []
+[2024-06-03T22:46:38.602714+02:00] info.INFO: Urzytkowanik o ip: ::1 prosi o akcje: /megusta/login [] []
+[2024-06-03T22:46:42.138868+02:00] info.INFO: Urzytkowanik o ip: ::1 prosi o akcje: /megusta/register [] []
+[2024-06-03T22:46:55.391394+02:00] info.INFO: Zarejstrowano nowego użytkownika: sami o mailu: samuelbitner06@gmail.com [] []
+[2024-06-03T22:46:55.718460+02:00] info.INFO: Urzytkowanik o ip: ::1 prosi o akcje: /megusta/checkmail [] []
+[2024-06-03T22:47:14.846705+02:00] info.INFO: Urzytkowanik o ip: ::1 prosi o akcje: /megusta/confirm [] []
