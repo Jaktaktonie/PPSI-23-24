@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql = "UPDATE `opinie` SET `opinia`= ? ,`komentarz`= ? WHERE konsument_id = ? and produkt_id = ? ";
                 $result = $db->queryDB_injection($sql, [$rate, $comment, $user_id, $id_produktu]);
             }else {
-                $sql = "INSERT INTO opinie (`opinia`, `imie`, `komentarz`,`konsument_id`,`produkt_id`) VALUES (?,?,?,?,?)";
-                $result = $db->queryDB_injection($sql, [$rate, $imie, $comment, $user_id, $id_produktu]);
+                $sql = "INSERT INTO opinie (`opinia`, `komentarz`,`konsument_id`,`produkt_id`) VALUES ( ? , ? , ? , ? )";
+                $result = $db->queryDB_injection($sql, [$rate, $comment, $user_id, $id_produktu]);
             }
             header("location: index");
         }else{

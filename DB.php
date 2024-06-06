@@ -1,10 +1,13 @@
 <?php
+require_once 'logger.php';
 class DB
 {
+    private $logger;
      private $db;
     public function __construct()
     {
-        $this->db = mysqli_connect("localhost", "root", "", "studia");
+        $this->logger = new MyLogger();
+        $this->db = mysqli_connect("localhost", "root", "", "megusta");
     }
     function getConnection()
     {
@@ -27,9 +30,8 @@ class DB
     public function queryDB_injection($sql, $params = []) {
         $stmt = $this->db->prepare($sql);
         if ($stmt === false) {
-            //die("Prepare failed: " . $this->db->error);
+            $this->logger->error("Bład przy przygotowywaniu zapytania.");
         }
-
         if (!empty($params)) {
             $types = '';
             $values = [];
@@ -42,10 +44,11 @@ class DB
             $bind_names = array_merge([$types], $values);
             call_user_func_array([$stmt, 'bind_param'], $bind_names);
         }
-        $stmt->execute();
+        $success = $stmt->execute();
         $result = $stmt->get_result();
-
-        if ($result === false) {
+        if ($success &&$result === false) {
+            return true;
+        }else if ($result === false) {
             return false;
         }
 
