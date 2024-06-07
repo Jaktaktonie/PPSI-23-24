@@ -1,5 +1,5 @@
 # PPSI-23-24
-Repozytorium projektu: Strona internetowa pn. „Me Gusta+”
+Repozytorium projektu: Strona internetowa pn. „MeGusta+”
 Grupa s2PAM2u: Andrzej Czabajski, Jan Łabaj, Dominik Kamiński
 
 Aby uruchomić projekt, należy zainstalować programy w następujących wersjach (w nawiasach ostatnia aktualizacja):

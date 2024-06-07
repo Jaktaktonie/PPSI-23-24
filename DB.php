@@ -12,6 +12,7 @@ class DB
     function getConnection()
     {
         return $this->db;
+
     }
     public function queryDB($query)
     {
